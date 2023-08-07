@@ -5,6 +5,8 @@ const { filterRes } = require("./middlewares/filterResponse");
 const app = express();
 const port = 4001;
 app.use(express.static("static"));
+app.use(express.json())
+app.use(express.urlencoded())
 app.use(
   "/admin",
   createProxyMiddleware({
