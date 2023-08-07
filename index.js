@@ -13,7 +13,7 @@ app.use(
     // 转发地址
     target: "http://ceshi5.dishait.cn",
     // 转发时重写路径
-    pathRewrite: { "^/admin": "admin" },
+    pathRewrite: { "^/admin": "/admin" },
     changeOrigin: true,
     onProxyRes(proxyResponse, req, serverResponse) {
       var body = "";
