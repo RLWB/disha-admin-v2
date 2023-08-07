@@ -11,10 +11,9 @@ app.use(
   "/admin",
   createProxyMiddleware({
     // 转发地址
-    target: "http://ceshi5.dishait.cn/",
-    // 转发时重写路径
-    pathRewrite: { "^/admin": "/admin" },
+    target: "http://ceshi5.dishait.cn",
     changeOrigin: true,
+    https:true,
     onProxyRes(proxyResponse, req, serverResponse) {
       var body = "";
       var _write = serverResponse.write;
